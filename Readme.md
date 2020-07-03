@@ -1,6 +1,3 @@
-*Tasks for WebGen-Studio Internship
-
--Each Task solved is found in a distinct branch.
 # Tasks for WebGen-Studio Internship
 
 -Each Task solved is found in a distinct branch with its readme.
