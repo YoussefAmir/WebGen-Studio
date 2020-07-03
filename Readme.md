@@ -4,6 +4,6 @@
 
 ## Tasks Submitted
 
-1. Task One: LightBox & Slde Show.
-2. Task Three: MySQL and Excel Sheet upload.
-3. Task Four: Register/Login implementing firebase.
+1. Task One: LightBox & Slde Show using angular.
+2. Task Three: MySQL and Excel Sheet upload using PHP and SQL.
+3. Task Four: Register/Login using angular and firebase.
