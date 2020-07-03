@@ -1,0 +1,54 @@
+<div id="login-box">
+  <div class="left">
+
+    <div class="center">
+      <h1>Sign up</h1>
+        <form [formGroup]="userForm">
+  
+          <input formControlName="name" type="text" name="username" placeholder="Username"/>
+          <div *ngIf="userForm.get('name').touched && userForm.get('name').hasError('required')" style="margin-bottom: 5px; color: red;">
+            Required
+          </div>
+        
+          <input formControlName="email" type="text" name="email" placeholder="E-mail"/>
+          <div *ngIf="userForm.get('email').touched && userForm.get('email').hasError('required')" style="margin-bottom: 5px; color: red;">Required</div>
+          <div *ngIf="userForm.get('email').touched && userForm.get('email').hasError('invalidEmailAddress')" style="margin-bottom: 5px; color: red;">{{errors['invalidEmailAddress']}}</div>
+  
+          <input formControlName="password" type="password" name="password" placeholder="Password" />
+          <div *ngIf="userForm.get('password').touched && userForm.get('password').hasError('required')" style="margin-bottom: 5px; color: red;">Required</div>
+          <div *ngIf="userForm.get('password').touched && userForm.get('password').hasError('invalidPassword')" style="margin-bottom: 5px; color: red;">{{errors['invalidPassword']}}</div>
+  
+          <input  formControlName="passwordRepeated" type="password" name="password2" placeholder="Retype password" style="margin-bottom: 10px;" />
+          <div *ngIf="userForm.get('passwordRepeated').value != userForm.get('password').value" style="margin-bottom: 5px; color: red;">Passwords Not Match</div>
+  
+          <input formControlName="phoneNumber" type="text" name="phone" placeholder="Phone Number" />
+          <div *ngIf="userForm.get('phoneNumber').touched && userForm.get('phoneNumber').hasError('required')" style="margin-bottom: 5px; color: red;">Required</div>
+          <div *ngIf="userForm.get('phoneNumber').touched && userForm.get('phoneNumber').hasError('invalidPhone')" style="margin-bottom: 5px; color: red;">Invalid Phone Number</div>
+  
+          <input formControlName="homeAddress" type="text" name="home" placeholder="Home Address"/>
+  
+  
+          <button style="text-align: center;" (click)= "saveUser()" [disabled]="userForm.invalid" >Sign Up</button>
+        
+        </form>
+  
+
+    </div>
+  </div>
+  <div class="right">
+    <h1>Sign In</h1>
+      <form [formGroup]="loginForm">
+
+        <input formControlName="email" type="text" name="email" placeholder="E-mail"/>
+        <div *ngIf="loginForm.get('email').touched && loginForm.get('email').hasError('required')" style="margin-bottom: 5px; color: red;">Required</div>
+        
+        <input formControlName="password" type="password" name="password" placeholder="Password" />
+        <div *ngIf="loginForm.get('password').touched && loginForm.get('password').hasError('required')" style="margin-bottom: 5px; color: red;">Required</div>
+
+        <button style="text-align: center; margin-top: 20px;" (click)= "login()" [disabled]="loginForm.invalid" >Login</button>
+
+
+      </form>
+
+  </div>
+</div>

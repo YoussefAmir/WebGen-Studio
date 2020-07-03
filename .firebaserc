@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "webgen-4dee4": {
+      "hosting": {
+        "Registeration-Login": [
+          "webgen-4dee4"
+        ]
+      }
+    }
+  }
+}
